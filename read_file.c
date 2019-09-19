@@ -13,7 +13,6 @@ int read_file(void)
 
 	while (getline(&(global()->line_buf), &line_buf_size, global()->file_pointer) > 0)
 	{
-		global()->line_num++;
 		cmd = strtok(global()->line_buf, " \t\n");
 		if (!cmd || strchr(global()->line_buf, '#') != NULL)
 			continue;
@@ -25,6 +24,7 @@ int read_file(void)
 		}
 		number = strtok(NULL, " \t\n");
 		global()->node_number = number;
+		global()->line_num++;
 		f(&(global()->global_head), 1);
 	}
 	return (EXIT_SUCCESS);
