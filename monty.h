@@ -48,6 +48,7 @@ typedef struct global_s
 {
 	stack_t *global_head;
 	FILE *file_pointer;
+	char *line_buf;
 	unsigned int line_num;
 	char *node_number;
 } global_t;
