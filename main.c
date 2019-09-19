@@ -1,16 +1,6 @@
 #include "monty.h"
 
 /**
- * destruct - free some global variables
-
- void destruct(void) __attribute__ ((destructor));
- void destruct(void)
- {
- free_linkedlist(global()->global_head);
- fclose(global()->file_pointer);
- }
- */
-/**
  * main - entry point for monty program
  * @argc: argument count
  * @argv: arguments
@@ -37,6 +27,5 @@ int main(int argc, char *argv[])
 	read_file();
 	free_linkedlist(global()->global_head);
 	fclose(global()->file_pointer);
-
 	return (EXIT_SUCCESS);
 }

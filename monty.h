@@ -56,7 +56,6 @@ global_t *global(void);
 int check_num(char *string);
 int read_file(void);
 void free_linkedlist(stack_t *head);
-void clean_up(void);
 
 void (*get_op(char *opcode))(stack_t **stack, unsigned int line_number);
 void _push(stack_t **stack, unsigned int line_number);
@@ -74,7 +73,4 @@ void _mod(stack_t **stack, unsigned int line_number);
 
 
 
-
-/*void destruct(void);
-*/
 #endif

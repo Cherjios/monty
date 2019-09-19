@@ -14,6 +14,8 @@ void _pop(stack_t **stack, unsigned int line_number)
 	if (!*stack)
 	{
 		fprintf(stderr, "L%d: can't pop an empty stack\n", global()->line_num);
+		free_linkedlist(global()->global_head);
+		fclose(global()->file_pointer);
 		exit(EXIT_FAILURE);
 	}
 
