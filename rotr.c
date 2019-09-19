@@ -1,4 +1,4 @@
-#include "lists.h"
+#include "monty.h"
 
 /**
  * _rotr - a function that reverses a linked list
