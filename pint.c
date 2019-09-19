@@ -17,5 +17,5 @@ void _pint(stack_t **stack, unsigned int line_number)
 		fclose(global()->file_pointer);
 		exit(EXIT_FAILURE);
 	}
-	printf("%d\n", global()->global_head->n);
+	printf("%d\n", (*stack)->n);
 }
