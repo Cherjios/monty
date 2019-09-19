@@ -21,5 +21,4 @@ void _pop(stack_t **stack, unsigned int line_number)
 	if (current_node->next != NULL)
 		current_node->next->prev = NULL;
 	free(current_node);
-	printf("Pop!\n");
 }
