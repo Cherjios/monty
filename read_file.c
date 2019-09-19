@@ -16,6 +16,8 @@ int read_file(void)
 	while (getline(&line_buf, &line_buf_size, global()->file_pointer) > 0)
 	{
 		cmd = strtok(line_buf, " \t\n");
+		if (!cmd)
+			continue;
 		f = get_op(cmd);
 		if (!f)
 		{
