@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * push - creates new node at the top of the stack
+ * _push - creates new node at the top of the stack
  * @stack: head of the linked list
  * @line_number: line of command
  * Return: void
@@ -9,21 +9,27 @@
 void _push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new_node = malloc(sizeof(stack_t));
+	stack_t *current = *stack;
 	(void) line_number;
 
 	if (new_node == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
-		exit (EXIT_FAILURE);
+		free(new_node);
+		exit(EXIT_FAILURE);
 	}
-	new_node->n = global()->node_number;
-	new_node->prev = NULL;
-	if (stack)
+	if (!global()->node_number || check_num(global()->node_number) == -1)
 	{
-		new_node->next = *stack;
-		(*stack)->prev = new_node;
+		fprintf(stderr, "L%d: usage: push integer\n", global()->line_num);
 	}
-	global()->global_head = &new_node;
-	global()->line_number += 1;
-	printf("I'm pushing!\n");
+	new_node->n = atoi(global()->node_number);
+	new_node->prev = NULL;
+
+	if (current)
+	{
+		new_node->next = current;
+		current->prev = new_node;
+	}
+	global()->global_head = new_node;
+	printf("Pushing, Node Number: %d\n", atoi(global()->node_number));
 }

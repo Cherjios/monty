@@ -2,8 +2,8 @@
 
 /**
  * get_op - finds and executes a function based on opcode
- * @stack: double pointer to head of stack
  * @opcode: command
+ * Return: void
  */
 void (*get_op(char *opcode))(stack_t **stack, unsigned int line_number)
 {
@@ -13,8 +13,8 @@ void (*get_op(char *opcode))(stack_t **stack, unsigned int line_number)
 		{"push", _push},
 		{"pall", _pall},
 /*		{"pint", pint},
-		{"pop", pop},
-		{"swap", swap},
+*/		{"pop", _pop},
+/*		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
 		{"sub", sub},
