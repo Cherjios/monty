@@ -61,8 +61,8 @@ void clean_up(void);
 void (*get_op(char *opcode))(stack_t **stack, unsigned int line_number);
 void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
-
 void _pop(stack_t **stack, unsigned int line_number);
+
 void _swap(stack_t **stack, unsigned int line_number);
 void _add(stack_t **stack, unsigned int line_number);
 #endif
