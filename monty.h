@@ -75,7 +75,6 @@ void _mod(stack_t **stack, unsigned int line_number);
 
 
 
-
-void destruct(void);
-
+/*void destruct(void);
+*/
 #endif
