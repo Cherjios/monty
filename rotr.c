@@ -3,6 +3,7 @@
 /**
  * _rotr - a function that reverses a linked list
  * @stack: head node
+ * @line_number: line number
  * Return: void
  */
 void _rotr(stack_t **stack, unsigned int line_number)

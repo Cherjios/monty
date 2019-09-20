@@ -12,9 +12,9 @@ void _add(stack_t **stack, unsigned int line_number)
 	stack_t *temp = *stack;
 	(void) line_number;
 
-	if (!(*stack)->next)
+	if (!*stack || !(*stack)->next)
 	{
-		fprintf(stderr, "L%d: can't swap, stack too short\n", global()->line_num);
+		fprintf(stderr, "L%d: can't add, stack too short\n", global()->line_num);
 		exit(EXIT_FAILURE);
 	}
 

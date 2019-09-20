@@ -38,6 +38,7 @@ int check_num(char *string)
 			case '-':
 				if (++minusCount > 1)
 					return (-1);
+				break;
 			default:
 				if (c < '0' || c > '9')
 					return (-1);
