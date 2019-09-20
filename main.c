@@ -1,8 +1,9 @@
 #include "monty.h"
 
 /**
-  destruct - free some global variables
-  */
+ * destruct - free some global variables
+ * Return: Void
+ */
 void destruct(void) __attribute__ ((destructor));
 void destruct(void)
 {
@@ -27,7 +28,7 @@ int main(int argc, char *argv[])
 	}
 	if (!(global()->file_pointer))
 	{
-		fprintf(stderr, "Error opening file '%s'\n", argv[1]);
+		fprintf(stderr, "Error Can't open file %s\n", argv[1]);
 		return (EXIT_FAILURE);
 	}
 	read_file();

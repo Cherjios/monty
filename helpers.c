@@ -48,10 +48,10 @@ int check_num(char *string)
 }
 
 /**
- *  * free_linkedlist - a function that frees a linked list.
- *   * @head: pointer to head node
- *    * Return: Nothing
- *     */
+ * free_linkedlist - a function that frees a linked list.
+ * @head: pointer to head node
+ * Return: Nothing
+ */
 void free_linkedlist(stack_t *head)
 {
 	stack_t *free_node = head;

@@ -6,12 +6,12 @@
  */
 int read_file(void)
 {
-	size_t line_buf_size = 0;
+	size_t buf_size = 0;
 	void (*f)(stack_t **stack, unsigned int line_number) = NULL;
 	char *cmd;
 	char *number;
 
-	while (getline(&(global()->line_buf), &line_buf_size, global()->file_pointer) > 0)
+	while (getline(&(global()->line_buf), &buf_size, global()->file_pointer) > 0)
 	{
 		cmd = strtok(global()->line_buf, " \t\n");
 		if (!cmd || strchr(global()->line_buf, '#') != NULL)

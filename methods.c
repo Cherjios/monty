@@ -67,8 +67,6 @@ void _pint(stack_t **stack, unsigned int line_number)
 	if (!temp)
 	{
 		fprintf(stderr, "L%d: can't pint, stack empty\n", global()->line_num);
-		free_linkedlist(global()->global_head);
-		fclose(global()->file_pointer);
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", temp->n);

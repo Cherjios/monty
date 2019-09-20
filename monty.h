@@ -40,7 +40,11 @@ typedef struct instruction_s
 
 /**
  * struct global_s - struct for  global variables
- * @env_head: pointer to environment linked list
+ * @global_head: pointer to global linked list
+ * @file_pointer: pointer to top of file
+ * @line_buf: pointer to geline buffer
+ * @line_num: command line count
+ * @node_number: temporary placeholder for node number
  * Description: global variable structure
  * for monty
  */
