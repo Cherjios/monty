@@ -8,6 +8,7 @@ global_t *global(void)
 {
 	static global_t global = {
 		NULL,
+		NULL,
 		0,
 		0,
 	};
