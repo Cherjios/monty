@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * _pall - Prints all the values on the stack,
+ * add - Adds the top two elements of the stack,
  * starting from the top of the stack
  * @stack: head of the linked list
  * @line_number: line of command

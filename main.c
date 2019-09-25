@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	char *line_buf = NULL;
 	size_t line_buf_size = 0;
 	unsigned int fake_number = 1;
-	ssize_t line_size = 0;
+/*	ssize_t line_size = 0;  */
 	size_t line_count = 0;
 	void (*f)(stack_t **stack, unsigned int line_number) = NULL;
 	char *command;
