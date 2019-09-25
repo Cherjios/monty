@@ -30,3 +30,4 @@ void free_linkedlist(stack_t *head)
 		}
 	}
 }
+
