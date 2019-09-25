@@ -26,7 +26,6 @@ int read_file(void)
 		global()->node_number = number;
 		f(&(global()->global_head), fake_number);
 		global()->line_num++;
-		printf("After calling function -  Line Number: %d\n", global()->line_num);
 	}
 	free(line_buf);
 	line_buf = NULL;

@@ -31,5 +31,4 @@ void _push(stack_t **stack, unsigned int line_number)
 		current->prev = new_node;
 	}
 	global()->global_head = new_node;
-	printf("Pushing, Node Number: %d\n", atoi(global()->node_number));
 }

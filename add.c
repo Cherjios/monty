@@ -1,19 +1,23 @@
 #include "monty.h"
 
 /**
- * add - Adds the top two elements of the stack,
- * starting from the top of the stack
+ * _add - Adds the value of the top two nodes and
+ * removes the top node
  * @stack: head of the linked list
  * @line_number: line of command
  * Return: void
  */
-void _pall(stack_t **stack, unsigned int line_number)
+void _add(stack_t **stack, unsigned int line_number)
 {
+	stack_t *temp = *stack;
 	(void) line_number;
 
-	while (*stack)
+	if (!(*stack)->next)
 	{
-		printf("%d\n", stack->n);
-		stack = stack->next;
+		fprintf(stderr, "L%d: can't swap, stack too short\n", global()->line_num);
+		exit(EXIT_FAILURE);
 	}
+
+	temp->next->n = temp->next->n + temp->n;
+	_pop(&(*stack), 1);
 }

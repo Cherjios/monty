@@ -26,7 +26,4 @@ void _swap(stack_t **stack, unsigned int line_number)
 		(*stack)->next = temp_node;
 		(*stack)->prev = NULL;
 	}
-	free(temp_node);
-	global()->line_num += 1;
-	printf("Pop! Node Number: %d\n", atoi(global()->node_number));
 }
