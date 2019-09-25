@@ -12,8 +12,8 @@ void (*get_op(char *opcode))(stack_t **stack, unsigned int line_number)
 	instruction_t get_op[] = {
 		{"push", _push},
 		{"pall", _pall},
-/*		{"pint", pint},
-*/		{"pop", _pop},
+		{"pint",_pint},
+		{"pop", _pop},
 /*		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
