@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * _pchar - Prints the value at the top of the stack.
+ * _pchar - Prints the char value .
  * @stack: head of the linked list
  * @line_number: line of command
  * Return: void
@@ -16,7 +16,7 @@ void _pchar(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	if ((*stack)->n < 32 || (*stack)->n > 128)
+	if ((*stack)->n < 0 || (*stack)->n > 177)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", global()->cmd_num);
 		exit(EXIT_FAILURE);
