@@ -42,5 +42,5 @@ File Name | Description
 ---
 
 This project was built by [Ryuichi Miyazaki](http://github.com/rmiyazaki6499) and
-[lllll](http://github.com/eightlimbed) at
+[Sergio Lopez](http://github.com/Cherjios) at
 [Holberton School](http://holbertonschool.com)

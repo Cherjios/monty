@@ -83,7 +83,11 @@ void _div(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%d: can't div, stack too short\n", global()->cmd_num);
 		exit(EXIT_FAILURE);
 	}
-
+	if (temp->n == 0)
+	{
+		fprintf(stderr, "L%d: division by zero\n", global()->cmd_num);
+		exit(EXIT_FAILURE);
+	}	
 	temp->next->n = temp->next->n / temp->n;
 	_pop(&(*stack), 1);
 }
