@@ -8,7 +8,6 @@
  */
 void _pchar(stack_t **stack, unsigned int line_number)
 {
-	int ascii;
 	(void) line_number;
 
 	if (!*stack)
@@ -17,14 +16,11 @@ void _pchar(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	if ((*stack)->n < 32 || (*stack)->n > 128)
+	if ((*stack)->n < 31 || (*stack)->n > 128)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", global()->cmd_num);
 		exit(EXIT_FAILURE);
 	}
 	else
-	{
-		ascii = (*stack)->n - 48 + '0';
-		printf("%c\n", ascii);
-	}
+		printf("%c\n", (*stack)->n);
 }
