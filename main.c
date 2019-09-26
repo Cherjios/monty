@@ -22,9 +22,10 @@ void destruct(void)
  */
 int main(int argc, char *argv[])
 {
-	global()->file_pointer = fopen(argv[1], "r");
+	if (argv[1])
+		global()->file_pointer = fopen(argv[1], "r");
 
-	if (argc != 2 || !argv[1])
+	if (argc != 2)
 	{
 		printf("USAGE: monty file\n");
 		exit(EXIT_FAILURE);
