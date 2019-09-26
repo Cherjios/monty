@@ -41,6 +41,6 @@ File Name | Description
 
 ---
 
-This project was built by [jjjj](http://github.com/vkalia602) and
+This project was built by [Ryuichi Miyazaki](http://github.com/rmiyazaki6499) and
 [lllll](http://github.com/eightlimbed) at
 [Holberton School](http://holbertonschool.com)
