@@ -34,13 +34,13 @@ void _sub(stack_t **stack, unsigned int line_number)
 	stack_t *temp = *stack;
 	(void) line_number;
 
-	if (!(*stack)->next)
+	if (!*stack || !(*stack)->next)
 	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", global()->cmd_num);
 		exit(EXIT_FAILURE);
 	}
 
-	temp->next->n = temp->next->n - temp->n;
+	temp->next->n = temp->n - temp->next->n;
 	_pop(&(*stack), 1);
 }
 
@@ -56,7 +56,7 @@ void _mul(stack_t **stack, unsigned int line_number)
 	stack_t *temp = *stack;
 	(void) line_number;
 
-	if (!(*stack)->next)
+	if (!*stack || !(*stack)->next)
 	{
 		fprintf(stderr, "L%d: can't mul, stack too short\n", global()->cmd_num);
 		exit(EXIT_FAILURE);
@@ -78,7 +78,7 @@ void _div(stack_t **stack, unsigned int line_number)
 	stack_t *temp = *stack;
 	(void) line_number;
 
-	if (!(*stack)->next)
+	if (!*stack || !(*stack)->next)
 	{
 		fprintf(stderr, "L%d: can't div, stack too short\n", global()->cmd_num);
 		exit(EXIT_FAILURE);
@@ -100,7 +100,7 @@ void _mod(stack_t **stack, unsigned int line_number)
 	stack_t *temp = *stack;
 	(void) line_number;
 
-	if (!(*stack)->next)
+	if (!*stack || !(*stack)->next)
 	{
 		fprintf(stderr, "L%d: can't mod, stack too short\n", global()->cmd_num);
 		exit(EXIT_FAILURE);
