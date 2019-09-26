@@ -32,5 +32,7 @@ void (*get_op(char *opcode))(stack_t **stack, unsigned int line_number)
 			return (get_op[i].f);
 	}
 	fprintf(stderr, "L%d: unknown instruction %s\n", global()->line_num, opcode);
+	free(global()->line_buf);
+	free_linkedlist(global()->global_head);
 	exit(EXIT_FAILURE);
 }

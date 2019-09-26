@@ -14,12 +14,16 @@ void _pchar(stack_t **stack, unsigned int line_number)
 	if (!*stack)
 	{
 		fprintf(stderr, "L%d: can't pchar, stack empty\n", global()->line_num);
+		free(global()->line_buf);
+		free_linkedlist(global()->global_head);
 		exit(EXIT_FAILURE);
 	}
 
 	if ((*stack)->n < 32 || (*stack)->n > 128)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", global()->line_num);
+		free(global()->line_buf);
+		free_linkedlist(global()->global_head);
 		exit(EXIT_FAILURE);
 	}
 	else

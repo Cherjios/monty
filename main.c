@@ -7,9 +7,12 @@
 void destruct(void) __attribute__ ((destructor));
 void destruct(void)
 {
-	free(global()->line_buf);
-	free_linkedlist(global()->global_head);
-	fclose(global()->file_pointer);
+	if (global()->line_buf)
+		free(global()->line_buf);
+	if (global()->global_head)
+		free_linkedlist(global()->global_head);
+	if (global()->file_pointer)
+		fclose(global()->file_pointer);
 }
 /**
  * main - entry point for monty program
@@ -21,14 +24,14 @@ int main(int argc, char *argv[])
 {
 	global()->file_pointer = fopen(argv[1], "r");
 
-	if (argc != 2)
+	if (argc != 2 || !argv[1])
 	{
-		fprintf(stderr, "USAGE: monty file\n");
+		printf("USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	if (!(global()->file_pointer))
 	{
-		fprintf(stderr, "Error Can't open file %s\n", argv[1]);
+		printf("Error Can't open file %s\n", argv[1]);
 		return (EXIT_FAILURE);
 	}
 	read_file();
