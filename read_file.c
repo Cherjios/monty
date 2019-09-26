@@ -13,7 +13,7 @@ int read_file(void)
 
 	while (getline(&(global()->line_buf), &buf_size, global()->file_pointer) > 0)
 	{
-		global()->line_num++;
+		global()->cmd_num++;
 		cmd = strtok(global()->line_buf, " \t\n");
 		if (!cmd || strchr(global()->line_buf, '#') != NULL)
 			continue;

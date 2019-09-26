@@ -43,7 +43,7 @@ typedef struct instruction_s
  * @global_head: pointer to global linked list
  * @file_pointer: pointer to top of file
  * @line_buf: pointer to geline buffer
- * @line_num: command line count
+ * @cmd_num: command line count
  * @node_number: temporary placeholder for node number
  * Description: global variable structure
  * for monty
@@ -53,7 +53,7 @@ typedef struct global_s
 	stack_t *global_head;
 	FILE *file_pointer;
 	char *line_buf;
-	unsigned int line_num;
+	unsigned int cmd_num;
 	char *node_number;
 } global_t;
 

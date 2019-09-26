@@ -20,7 +20,7 @@ void _push(stack_t **stack, unsigned int line_number)
 
 	if (!global()->node_number || check_num(global()->node_number) == -1)
 	{
-		fprintf(stderr, "L%d: usage: push integer\n", global()->line_num);
+		fprintf(stderr, "L%d: usage: push integer\n", global()->cmd_num);
 		free(new_node);
 		exit(EXIT_FAILURE);
 	}
@@ -66,7 +66,7 @@ void _pint(stack_t **stack, unsigned int line_number)
 
 	if (!temp)
 	{
-		fprintf(stderr, "L%d: can't pint, stack empty\n", global()->line_num);
+		fprintf(stderr, "L%d: can't pint, stack empty\n", global()->cmd_num);
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", temp->n);
@@ -85,7 +85,7 @@ void _pop(stack_t **stack, unsigned int line_number)
 
 	if (!*stack)
 	{
-		fprintf(stderr,"L%d: can't pop an empty stack\n", global()->line_num);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", global()->cmd_num);
 		exit(EXIT_FAILURE);
 	}
 
@@ -108,7 +108,7 @@ void _swap(stack_t **stack, unsigned int line_number)
 
 	if (!temp_node || !temp_node->next)
 	{
-		fprintf(stderr, "L%d: can't swap, stack too short\n", global()->line_num);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", global()->cmd_num);
 		exit(EXIT_FAILURE);
 	}
 

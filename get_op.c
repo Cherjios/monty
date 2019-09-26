@@ -31,6 +31,6 @@ void (*get_op(char *opcode))(stack_t **stack, unsigned int line_number)
 		if (strcmp(opcode, get_op[i].opcode) == 0)
 			return (get_op[i].f);
 	}
-	fprintf( stderr, "L%d: unknown instruction %s\n", global()->line_num, opcode);
+	fprintf(stderr, "L%d: unknown instruction %s\n", global()->cmd_num, opcode);
 	exit(EXIT_FAILURE);
 }
