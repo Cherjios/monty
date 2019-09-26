@@ -75,6 +75,6 @@ void _mod(stack_t **stack, unsigned int line_number);
 
 
 
-/*void destruct(void);
-*/
+void _rotr(stack_t **stack, unsigned int line_number)
+  
 #endif
