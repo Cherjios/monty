@@ -8,14 +8,15 @@
  */
 void _pint(stack_t **stack, unsigned int line_number)
 {
+	stack_t *temp = *stack;
 	(void) line_number;
 
-	if (!*stack)
+	if (!temp)
 	{
 		fprintf(stderr, "L%d: can't pint, stack empty\n", global()->line_num);
+		free_linkedlist(global()->global_head);
+		fclose(global()->file_pointer);
 		exit(EXIT_FAILURE);
 	}
-
-	printf("%d\n", (*stack)->n);
-
+	printf("%d\n", temp->n);
 }
