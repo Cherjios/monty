@@ -1,8 +1,8 @@
 #include "monty.h"
 
 /**
- * read_file - a function that frees a linked list.
- * Return: Nothing
+ * read_file - a function that reads files.
+ * Return: Exti success
  */
 int read_file(void)
 {

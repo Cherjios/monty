@@ -19,26 +19,28 @@ Feel free to use `001.m` as a test file.
 
 **Operations**
 List of monty operations this interpreted understands:
-- `push <integer>`: pushes an integer on to the stack
-- `pall`: prints the values of every node on the stack
-- `pint`: prints the value of the node at the top of the stack
-- `pop`: removes the node at the top of the stack
-- `swap`: swaps the position of the top two nodes
-- `add`: places the sum of the top two nodes into the 2nd node and removes the
+- `push <integer>`: Pushes an integer on to the stack
+- `pall`: Prints the values of every node on the stack
+- `pint`: Prints the value of the node at the top of the stack
+- `pop`: Pemoves the node at the top of the stack
+- `swap`: Swaps the position of the top two nodes
+- `add`: Places the sum of the top two nodes into the 2nd node and removes the
   first
-- `nop`: does nothing
+- `nop`: Does nothing
+- `sub`: Substracs the top element of the stack from the second top element of the stack
+- `div`: Substracs the top element of the stack from the second top element of the stack
 
 ---
 
 File Name | Description
 --- | ---
-`monty.c` | Main program file
+`main.c` | Main program file
 `monty.h` | Header file
-`parser.c` | Parses each line of Monty file
-`stack_functions.c` | Functions for manipulating and printing from the stack
-`math_functions.c` | Functions that do mathematical operations to the stack
-`etc_functions.` | Functions for error handling and memory management
-
+`helper.c` | Global variable, Free linkedlist
+`nop.c` | Nop Function
+`math.c` | Functions that do mathematical operations to the stack
+`math.c` | Functions that do mathematical operations to the stack
+`read_file.c` | Function that opens and reads files
 ---
 
 This project was built by [Ryuichi Miyazaki](http://github.com/rmiyazaki6499) and
