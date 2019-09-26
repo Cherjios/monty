@@ -27,12 +27,12 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		printf("USAGE: monty file\n");
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	if (!(global()->file_pointer))
 	{
-		printf("Error Can't open file %s\n", argv[1]);
+		fprintf(stderr, "Error Can't open file %s\n", argv[1]);
 		return (EXIT_FAILURE);
 	}
 	read_file();
