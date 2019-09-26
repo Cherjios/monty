@@ -18,11 +18,6 @@ int read_file(void)
 		if (!cmd || strchr(global()->line_buf, '#') != NULL)
 			continue;
 		f = get_op(cmd);
-		if (!f)
-		{
-			fprintf(stderr, "L%d: unknown instruction %s\n", global()->line_num, cmd);
-			return (EXIT_FAILURE);
-		}
 		number = strtok(NULL, " \t\n");
 		global()->node_number = number;
 		f(&(global()->global_head), 1);
