@@ -7,6 +7,8 @@ Monty 0.98 is a scripting language that is first compiled into Monty byte codes
 manipulate it. The goal of this project is to create an interpreter for 
 Monty ByteCodes files.
 
+Files containing Monty byte codes usually have the .m extension.
+
 ---
 
 **Usage**
@@ -29,7 +31,13 @@ List of monty operations this interpreted understands:
 - `nop`: Does nothing
 - `sub`: Substracs the top element of the stack from the second top element of the stack
 - `div`: Substracs the top element of the stack from the second top element of the stack
-
+- `mul`: Multiplies the second top element of the stack with the top element of the stack
+- `mod`: Computes the rest of the division of the  second top element of the stack by the top element of the stack
+- `commnets`: Treat lines as a comments (don't do anything)
+- `pchar`: Prints the char at the top of the stack, fallowed by a new line.
+- `pstr`: Prints the  string starting at the top of the stack, fallowed by a new line.
+- `rotl`: Rotates the stack to the top
+- `rotr`: Rotates the stack to the bottom
 ---
 
 File Name | Description
