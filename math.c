@@ -87,7 +87,7 @@ void _div(stack_t **stack, unsigned int line_number)
 	{
 		fprintf(stderr, "L%d: division by zero\n", global()->cmd_num);
 		exit(EXIT_FAILURE);
-	}	
+	}
 	temp->next->n = temp->next->n / temp->n;
 	_pop(&(*stack), 1);
 }
@@ -113,7 +113,7 @@ void _mod(stack_t **stack, unsigned int line_number)
 	{
 		fprintf(stderr, "L%d: division by zero\n", global()->cmd_num);
 		exit(EXIT_FAILURE);
-	}	
+	}
 	temp->next->n = temp->next->n % temp->n;
 	_pop(&(*stack), 1);
 }
