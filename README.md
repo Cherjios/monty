@@ -36,10 +36,11 @@ File Name | Description
 --- | ---
 `main.c` | Main program file
 `monty.h` | Header file
-`helper.c` | Global variable, Free linkedlist
-`nop.c` | Nop Function
+`helpers.c` | Global variable, Free linkedlist
 `math.c` | Functions that do mathematical operations to the stack
-`math.c` | Functions that do mathematical operations to the stack
+`methods.c` | Functions that modify the  stack (Push, pall, pint, pop, swap,)
+`get_op.c` | Function that finds and executes a function based on opcode
+`extra.c` | Function that modify the stack (nop, pchar, pstr, rotl, rotr)
 `read_file.c` | Function that opens and reads files
 ---
 
